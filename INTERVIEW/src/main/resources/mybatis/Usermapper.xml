@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuqi.interview.mapper.Usermapper">
+   <select id="findall" resultType="User">SELECT * FROM USER</select>
+   <select id="getgrade" resultType="User">SELECT * FROM USER WHERE NAME = #{name}</select>
+   <select id="insert" resultType="User">INSERT INTO USER(NAME,GRADE,UPDATETIME) VALUES(#{name},#{grade},#{updatetime})</select>
+   <select id="update" resultType="User">UPDATE USER SET NAME=#{name},GRADE=#{grade},UPDATETIME=#{updatetime} WHERE NAME =#{name}</select>
+   <select id="getgradebyname" resultType="User">SELECT * FROM USER WHERE NAME = #{name}</select>
+</mapper>
